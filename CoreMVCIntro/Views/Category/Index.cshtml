@@ -1,0 +1,35 @@
+﻿@model CategoryVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@if (Model.Categories.Count == 0)
+{
+    <div class="jumbotron">
+        Henüz hicbir kategori eklemediniz..Kategori eklemek icin <a asp-action="AddCategory" asp-controller="Category"> tıklayınız</a>
+    </div>
+}
+else
+{
+    <table class="table table-hover">
+        <tr>
+            <th>Kategori ismi</th>
+            <th>Acıklaması</th>
+            <th colspan="2">Islemler</th>
+        </tr>
+        @foreach (Category item in Model.Categories)
+        {
+            <tr>
+                <td>@item.CategoryName</td>
+                <td>@item.Description</td>
+                <td>
+                    <a class="btn btn-warning" asp-action="UpdateCategory" asp-controller="Category" asp-route-id="@item.ID">Güncelle</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-action="DeleteCategory" asp-route-id="@item.ID"> Kategori Sil</a>
+                </td>
+            </tr>
+        }
+    </table>
+}

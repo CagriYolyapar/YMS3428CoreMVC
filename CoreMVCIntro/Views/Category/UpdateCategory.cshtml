@@ -1,0 +1,17 @@
+﻿@model CategoryVM
+@{
+    ViewData["Title"] = "UpdateCategory";
+}
+
+
+<form asp-action="UpdateCategory" asp-controller="Category" method="post">
+    <div>
+        <input type="hidden" asp-for="Category.ID" />
+        <input type="text" asp-for="Category.CategoryName" placeholder="Lütfen kategori ismi giriniz" />
+
+        @Html.TextAreaFor(x => x.Category.Description, new { placeholder = "Lütfen ACıklama giriniz" })
+
+        <button>Güncelle</button>
+    </div>
+
+</form>
