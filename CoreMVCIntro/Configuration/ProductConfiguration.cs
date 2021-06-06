@@ -14,6 +14,12 @@ namespace CoreMVCIntro.Configuration
         {
             base.Configure(builder);
             builder.Property(x => x.ProductName).HasColumnName("Urun İsmi");
+            builder.Property(x => x.UnitPrice).HasColumnType("money");
+
+           
+            
+            
+
         }
     }
 }

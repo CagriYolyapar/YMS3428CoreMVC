@@ -15,3 +15,5 @@ namespace CoreMVCIntro.Models.Entities
 
     }
 }
+
+//{"CategoryName":"Beverages","Description":"..."}

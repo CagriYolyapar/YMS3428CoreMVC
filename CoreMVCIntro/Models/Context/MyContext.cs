@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace CoreMVCIntro.Models.Context
 {
     //EntityFrameowkrCore.SqlServer kütüphanesini indirmeyi de unutmamalısınız... Options ayarlamalarını yapabilmek icin bu gerekecektir...
@@ -13,7 +14,10 @@ namespace CoreMVCIntro.Models.Context
     {
         public MyContext(DbContextOptions<MyContext> options):base(options)
         {
-
+          
+           
+            
+          
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -27,5 +31,14 @@ namespace CoreMVCIntro.Models.Context
             modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
             
         }
+
+        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<AppUserProfile> Profiles { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
+
     }
 }
