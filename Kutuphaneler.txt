@@ -1,0 +1,7 @@
+﻿1=>Microsoft.EntityFrameworkCore => EntityFramework işlemlerinin Core'da temelini olusturan kütüphanedir
+2=>Microsoft.EntityFrameworkCore.SqlServer => EF işlemlerinin Core'da SqlServer üzerinden yapılacağını bildiren kütüphanedir
+3=>Microsoft.EntityFrameworkCore.Proxies => EF işlemlerinde Lazy Loading'in aktifleşmesini sağlayan kütüphanedir
+4=>Microsoft.EntityFrameworkCore.Tools => EF Code First işlemlerinde terminal komutlarının tanınmasını sağlayan kütüphanedir...
+
+//add-migration <migration ismi>
+//update-database
